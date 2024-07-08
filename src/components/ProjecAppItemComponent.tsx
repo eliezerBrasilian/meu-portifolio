@@ -47,7 +47,9 @@ export function ProjecAppItemComponent({ item }: ProjectItemComponentProps) {
               onClick={() => {
                 AppUtils.NavigateToNewWindow(item.testLink);
               }}
-              text={"GooglePlay"}
+              text={
+                item.title == "FoodFacil Delivery" ? "Abrir site" : "GooglePlay"
+              }
               padding={"9px 20px 9px 20px"}
               backgroundColor="#475A55"
             />
