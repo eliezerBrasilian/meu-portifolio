@@ -15,6 +15,10 @@ import d2 from "../assets/d1_x2.png";
 
 import { Nicho } from "../enums/Nicho";
 import { ProjectType } from "../enums/ProjectType";
+
+import fo1 from "../assets/fo1.png";
+import fo2 from "../assets/fo2.png";
+import fo3 from "../assets/fo3.png";
 import env from "./exposedEnv";
 
 export const projectItems: ProjectDto[] = [
@@ -53,10 +57,10 @@ export const projectItems: ProjectDto[] = [
   },
   {
     id: 4,
-    images: [d2],
+    images: [fo1, fo2, fo3],
     title: "FoodFacil Delivery",
     description:
-      "Seja muito bem vindo(a) ao meu perfil no LinkedIn, sempre estou publicando algo que eu acho interessante por lá",
+      "Um site de delivery de salgados, robusto que calcula taxa de entrega dependendo da localização do usuário. Possui também pagamentos via pix e autenticação com Google. E foi pensado exclusivamente para celulares",
     githubLink: env.foodfacilWebRepo,
     nicho: Nicho.DELIVERY,
     testLink: env.foodfacilWeb,

@@ -3,17 +3,21 @@ import s from "../modules/ProjectScreen.module.css";
 import { ProjectDto } from "../types/ProjectDto";
 import { AppUtils } from "../utils/AppUtils";
 import { CustomBtn } from "./CustomBtn";
-import { ImageSlider } from "./ImageSlider";
+import { ImageSlider, ObjectFit } from "./ImageSlider";
 
 interface ProjectItemComponentProps {
   item: ProjectDto;
+  objectFit?: ObjectFit;
 }
 
-export function ProjecAppItemComponent({ item }: ProjectItemComponentProps) {
+export function ProjecAppItemComponent({
+  item,
+  objectFit,
+}: ProjectItemComponentProps) {
   return (
     <div className={s.item_container}>
       <div className={s.item_row}>
-        <ImageSlider item={item} />
+        <ImageSlider item={item} objectFit={objectFit} />
 
         <div className={s.right_column}>
           <h3

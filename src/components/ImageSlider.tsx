@@ -4,16 +4,20 @@ import right from "../assets/right-arrow.png";
 import { ProjectDto } from "../types/ProjectDto";
 import { CircleArrowButton } from "./CircleArrowButton";
 
+export type ObjectFit = "fill" | "contain" | "cover" | "none" | "scale-down";
+
 interface ImageSliderProps {
   item: ProjectDto;
   width?: number;
   height?: number;
+  objectFit?: ObjectFit;
 }
 
 export function ImageSlider({
   item,
   height = 230,
   width = 140,
+  objectFit = "fill",
 }: ImageSliderProps) {
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -34,7 +38,7 @@ export function ImageSlider({
 
       <div style={{ height: height, width: width }}>
         <img
-          style={{ objectFit: "fill", height: "100%", width: "100%" }}
+          style={{ objectFit: objectFit, height: "100%", width: "100%" }}
           src={item.images[imageIndex]}
           alt="Imagem circular"
         />

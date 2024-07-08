@@ -12,7 +12,7 @@ interface ProjectItemComponentProps {
 
 export function ProjecSiteItemComponent({ item }: ProjectItemComponentProps) {
   if (item.title == "FoodFacil Delivery")
-    return <ProjecAppItemComponent item={item} />;
+    return <ProjecAppItemComponent item={item} objectFit="cover" />;
   return (
     <div style={{ marginBottom: 15 }}>
       <div
